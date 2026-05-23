@@ -17,9 +17,9 @@ MODEL_PATH = os.path.join(os.path.dirname(__file__), "saved_models", "theft_mode
 
 def get_sync_engine():
     # Convert asyncpg to psycopg2 for pandas compatibility
-    sync_url = settings.database_url.replace("+asyncpg", "")
-    if "+aiosqlite" in settings.database_url:
-        sync_url = settings.database_url.replace("+aiosqlite", "")
+    sync_url = settings.get_database_url.replace("+asyncpg", "")
+    if "+aiosqlite" in settings.get_database_url:
+        sync_url = settings.get_database_url.replace("+aiosqlite", "")
     return create_engine(sync_url)
 
 def train_model():
