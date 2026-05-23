@@ -71,5 +71,5 @@ export const CHART_COLORS = {
   },
 } as const;
 
-export const MAP_CENTER: [number, number] = [28.6139, 77.2090]; // New Delhi
+export const MAP_CENTER: [number, number] = [12.9716, 77.5946]; // Bangalore
 export const MAP_ZOOM = 12;

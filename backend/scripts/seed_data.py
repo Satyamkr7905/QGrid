@@ -29,8 +29,8 @@ def generate_mock_data():
         meters.append({
             "id": f"MTR-{1000+i}",
             "location": random.choice(locations),
-            "lat": 28.6139 + random.uniform(-0.05, 0.05),
-            "lng": 77.2090 + random.uniform(-0.05, 0.05),
+            "lat": 12.9716 + random.uniform(-0.05, 0.05),
+            "lng": 77.5946 + random.uniform(-0.05, 0.05),
             "status": "normal",
             "installed_at": now - timedelta(days=random.randint(100, 1000))
         })
@@ -81,8 +81,8 @@ def generate_mock_data():
             "id": f"NODE-{5000+i}",
             "name": f"{t.capitalize()} Alpha-{i}",
             "type": t,
-            "lat": 28.6139 + random.uniform(-0.1, 0.1),
-            "lng": 77.2090 + random.uniform(-0.1, 0.1),
+            "lat": 12.9716 + random.uniform(-0.1, 0.1),
+            "lng": 77.5946 + random.uniform(-0.1, 0.1),
             "status": "online" if random.random() > 0.1 else "warning",
             "capacity_mw": random.uniform(50, 500),
             "current_load_mw": random.uniform(10, 200)

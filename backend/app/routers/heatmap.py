@@ -70,8 +70,8 @@ class HeatmapLayerResponse(BaseModel):
 # Static seed data for consistent node names
 # ---------------------------------------------------------------------------
 
-_CITY_CENTER_LAT = 28.6139
-_CITY_CENTER_LNG = 77.2090
+_CITY_CENTER_LAT = 12.9716
+_CITY_CENTER_LNG = 77.5946
 
 _SUBSTATION_NAMES = [
     "Pragati Maidan 220kV", "Mehrauli 132kV", "Rohini Sec-3 220kV",
@@ -112,7 +112,7 @@ def _jitter(center: float, spread: float = 0.08) -> float:
 
 
 def _build_nodes() -> list[GridNode]:
-    """Generate a deterministic-ish set of grid nodes around New Delhi."""
+    """Generate a deterministic-ish set of grid nodes around Bangalore."""
     nodes: list[GridNode] = []
     node_id = 1
 

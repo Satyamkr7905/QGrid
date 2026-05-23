@@ -112,12 +112,12 @@ class CriticalNodesResponse(BaseModel):
 # Data helpers
 # ---------------------------------------------------------------------------
 
-_CENTER_LAT = 28.6139
-_CENTER_LNG = 77.2090
+_CENTER_LAT = 12.9716
+_CENTER_LNG = 77.5946
 
 _AREAS = [
     "Central Delhi", "South Delhi", "North Delhi", "East Delhi",
-    "West Delhi", "New Delhi District", "Shahdara Zone",
+    "West Delhi", "Bangalore District", "Shahdara Zone",
     "Dwarka Zone", "Rohini Zone", "Mehrauli Zone",
 ]
 

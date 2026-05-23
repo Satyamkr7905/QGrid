@@ -84,8 +84,8 @@ class TransformerHistoryResponse(BaseModel):
 # Data seed
 # ---------------------------------------------------------------------------
 
-_CENTER_LAT = 28.6139
-_CENTER_LNG = 77.2090
+_CENTER_LAT = 12.9716
+_CENTER_LNG = 77.5946
 
 _TRANSFORMERS = [
     ("TRF-001", "Karol Bagh 33/11kV", "Karol Bagh", "Siemens"),

@@ -64,8 +64,8 @@ export const theftAlerts: TheftAlert[] = [
 export const smartMeters: SmartMeter[] = Array.from({ length: 30 }, (_, i) => ({
   id: `SM-${String(1000 + i * 347).slice(0, 4)}`,
   location: `Sector ${Math.floor(Math.random() * 15) + 1}, Block ${String.fromCharCode(65 + Math.floor(Math.random() * 8))}`,
-  lat: 28.6139 + (Math.random() - 0.5) * 0.1,
-  lng: 77.2090 + (Math.random() - 0.5) * 0.1,
+  lat: 12.9716 + (Math.random() - 0.5) * 0.1,
+  lng: 77.5946 + (Math.random() - 0.5) * 0.1,
   consumption_kwh: Math.round((150 + Math.random() * 500) * 10) / 10,
   anomaly_score: Math.round(Math.random() * 100) / 100,
   theft_probability: Math.round(Math.random() * 100) / 100,
@@ -86,32 +86,32 @@ export function generateAnomalyData() {
 // Transformers
 // ══════════════════════════════════════════════
 export const transformers: Transformer[] = [
-  { id: "TR-001", name: "Transformer Alpha-1", location: "Substation North", lat: 28.63, lng: 77.21, age_years: 12, health_score: 92, temperature_celsius: 65, load_percent: 72, vibration_level: 0.3, oil_quality: 0.95, status: "healthy", predicted_failure_date: "2028-06-15", risk_level: "low" },
-  { id: "TR-002", name: "Transformer Beta-3", location: "Substation East", lat: 28.61, lng: 77.24, age_years: 18, health_score: 68, temperature_celsius: 78, load_percent: 88, vibration_level: 0.7, oil_quality: 0.72, status: "warning", predicted_failure_date: "2026-11-20", risk_level: "high" },
-  { id: "TR-003", name: "Transformer Gamma-5", location: "Substation Central", lat: 28.62, lng: 77.22, age_years: 8, health_score: 95, temperature_celsius: 58, load_percent: 55, vibration_level: 0.2, oil_quality: 0.98, status: "healthy", predicted_failure_date: "2031-03-10", risk_level: "low" },
+  { id: "TR-001", name: "Transformer Alpha-1", location: "Substation North", lat: 12.99, lng: 77.59, age_years: 12, health_score: 92, temperature_celsius: 65, load_percent: 72, vibration_level: 0.3, oil_quality: 0.95, status: "healthy", predicted_failure_date: "2028-06-15", risk_level: "low" },
+  { id: "TR-002", name: "Transformer Beta-3", location: "Substation East", lat: 12.97, lng: 77.62, age_years: 18, health_score: 68, temperature_celsius: 78, load_percent: 88, vibration_level: 0.7, oil_quality: 0.72, status: "warning", predicted_failure_date: "2026-11-20", risk_level: "high" },
+  { id: "TR-003", name: "Transformer Gamma-5", location: "Substation Central", lat: 12.98, lng: 77.60, age_years: 8, health_score: 95, temperature_celsius: 58, load_percent: 55, vibration_level: 0.2, oil_quality: 0.98, status: "healthy", predicted_failure_date: "2031-03-10", risk_level: "low" },
   { id: "TR-004", name: "Transformer Delta-2", location: "Substation South", lat: 28.59, lng: 77.20, age_years: 25, health_score: 42, temperature_celsius: 85, load_percent: 94, vibration_level: 1.2, oil_quality: 0.45, status: "critical", predicted_failure_date: "2026-08-05", risk_level: "critical" },
-  { id: "TR-005", name: "Transformer Epsilon-7", location: "Substation West", lat: 28.60, lng: 77.18, age_years: 5, health_score: 98, temperature_celsius: 52, load_percent: 40, vibration_level: 0.1, oil_quality: 0.99, status: "healthy", predicted_failure_date: "2035-01-01", risk_level: "low" },
-  { id: "TR-006", name: "Transformer Zeta-4", location: "Industrial Zone A", lat: 28.64, lng: 77.23, age_years: 15, health_score: 75, temperature_celsius: 72, load_percent: 82, vibration_level: 0.5, oil_quality: 0.80, status: "warning", predicted_failure_date: "2027-04-22", risk_level: "medium" },
-  { id: "TR-007", name: "Transformer Eta-9", location: "Commercial Hub B", lat: 28.62, lng: 77.19, age_years: 20, health_score: 55, temperature_celsius: 80, load_percent: 90, vibration_level: 0.9, oil_quality: 0.60, status: "warning", predicted_failure_date: "2026-12-01", risk_level: "high" },
-  { id: "TR-008", name: "Transformer Theta-6", location: "Residential Zone C", lat: 28.61, lng: 77.21, age_years: 3, health_score: 99, temperature_celsius: 48, load_percent: 35, vibration_level: 0.08, oil_quality: 0.99, status: "healthy", predicted_failure_date: "2038-07-15", risk_level: "low" },
+  { id: "TR-005", name: "Transformer Epsilon-7", location: "Substation West", lat: 12.96, lng: 77.56, age_years: 5, health_score: 98, temperature_celsius: 52, load_percent: 40, vibration_level: 0.1, oil_quality: 0.99, status: "healthy", predicted_failure_date: "2035-01-01", risk_level: "low" },
+  { id: "TR-006", name: "Transformer Zeta-4", location: "Industrial Zone A", lat: 13.00, lng: 77.61, age_years: 15, health_score: 75, temperature_celsius: 72, load_percent: 82, vibration_level: 0.5, oil_quality: 0.80, status: "warning", predicted_failure_date: "2027-04-22", risk_level: "medium" },
+  { id: "TR-007", name: "Transformer Eta-9", location: "Commercial Hub B", lat: 12.98, lng: 77.57, age_years: 20, health_score: 55, temperature_celsius: 80, load_percent: 90, vibration_level: 0.9, oil_quality: 0.60, status: "warning", predicted_failure_date: "2026-12-01", risk_level: "high" },
+  { id: "TR-008", name: "Transformer Theta-6", location: "Residential Zone C", lat: 12.97, lng: 77.59, age_years: 3, health_score: 99, temperature_celsius: 48, load_percent: 35, vibration_level: 0.08, oil_quality: 0.99, status: "healthy", predicted_failure_date: "2038-07-15", risk_level: "low" },
 ];
 
 // ══════════════════════════════════════════════
 // Grid Topology (Quantum Healing)
 // ══════════════════════════════════════════════
 export const gridNodes: GridNode[] = [
-  { id: "N-01", label: "Central Hub", lat: 28.6139, lng: 77.2090, type: "substation", status: "online", load_percentage: 72, name: "Central Substation", capacity_mw: 500 },
-  { id: "N-02", label: "North Grid", lat: 28.6340, lng: 77.2190, type: "substation", status: "online", load_percentage: 65, name: "North Substation", capacity_mw: 350 },
-  { id: "N-03", label: "East Grid", lat: 28.6100, lng: 77.2450, type: "substation", status: "online", load_percentage: 80, name: "East Substation", capacity_mw: 400 },
+  { id: "N-01", label: "Central Hub", lat: 12.9716, lng: 77.5946, type: "substation", status: "online", load_percentage: 72, name: "Central Substation", capacity_mw: 500 },
+  { id: "N-02", label: "North Grid", lat: 12.9940, lng: 77.5990, type: "substation", status: "online", load_percentage: 65, name: "North Substation", capacity_mw: 350 },
+  { id: "N-03", label: "East Grid", lat: 12.9700, lng: 77.6250, type: "substation", status: "online", load_percentage: 80, name: "East Substation", capacity_mw: 400 },
   { id: "N-04", label: "South Grid", lat: 28.5900, lng: 77.2000, type: "substation", status: "warning", load_percentage: 88, name: "South Substation", capacity_mw: 300 },
-  { id: "N-05", label: "West Grid", lat: 28.6050, lng: 77.1800, type: "substation", status: "online", load_percentage: 45, name: "West Substation", capacity_mw: 250 },
-  { id: "N-06", label: "Solar Alpha", lat: 28.6250, lng: 77.2350, type: "renewable", status: "online", load_percentage: 90, name: "Solar Farm Alpha", capacity_mw: 120 },
-  { id: "N-07", label: "Wind Beta", lat: 28.6400, lng: 77.1950, type: "renewable", status: "online", load_percentage: 70, name: "Wind Park Beta", capacity_mw: 85 },
-  { id: "N-08", label: "Battery-1", lat: 28.6000, lng: 77.2250, type: "storage", status: "online", load_percentage: 55, name: "Battery Storage 1", capacity_mw: 50 },
-  { id: "N-09", label: "TR-Alpha", lat: 28.6200, lng: 77.2150, type: "transformer", status: "online", load_percentage: 68, name: "Transformer Alpha", capacity_mw: 100 },
-  { id: "N-10", label: "TR-Beta", lat: 28.5950, lng: 77.2100, type: "transformer", status: "critical", load_percentage: 95, name: "Transformer Beta", capacity_mw: 80 },
-  { id: "N-11", label: "TR-Gamma", lat: 28.6300, lng: 77.2050, type: "transformer", status: "online", load_percentage: 42, name: "Transformer Gamma", capacity_mw: 120 },
-  { id: "N-12", label: "Hydro Plant", lat: 28.6450, lng: 77.2300, type: "renewable", status: "online", load_percentage: 85, name: "Hydro Plant Gamma", capacity_mw: 200 },
+  { id: "N-05", label: "West Grid", lat: 12.9650, lng: 77.5600, type: "substation", status: "online", load_percentage: 45, name: "West Substation", capacity_mw: 250 },
+  { id: "N-06", label: "Solar Alpha", lat: 12.9850, lng: 77.6150, type: "renewable", status: "online", load_percentage: 90, name: "Solar Farm Alpha", capacity_mw: 120 },
+  { id: "N-07", label: "Wind Beta", lat: 13.0000, lng: 77.5750, type: "renewable", status: "online", load_percentage: 70, name: "Wind Park Beta", capacity_mw: 85 },
+  { id: "N-08", label: "Battery-1", lat: 12.9600, lng: 77.6050, type: "storage", status: "online", load_percentage: 55, name: "Battery Storage 1", capacity_mw: 50 },
+  { id: "N-09", label: "TR-Alpha", lat: 12.9800, lng: 77.5950, type: "transformer", status: "online", load_percentage: 68, name: "Transformer Alpha", capacity_mw: 100 },
+  { id: "N-10", label: "TR-Beta", lat: 28.5950, lng: 77.5900, type: "transformer", status: "critical", load_percentage: 95, name: "Transformer Beta", capacity_mw: 80 },
+  { id: "N-11", label: "TR-Gamma", lat: 12.9900, lng: 77.5850, type: "transformer", status: "online", load_percentage: 42, name: "Transformer Gamma", capacity_mw: 120 },
+  { id: "N-12", label: "Hydro Plant", lat: 13.0050, lng: 77.6100, type: "renewable", status: "online", load_percentage: 85, name: "Hydro Plant Gamma", capacity_mw: 200 },
 ];
 
 export const gridEdges: GridEdge[] = [
