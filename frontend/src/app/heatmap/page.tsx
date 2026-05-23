@@ -157,18 +157,24 @@ export default function HeatmapPage() {
             </CardHeader>
             <CardContent className="space-y-2.5">
               {[
-                { status: 'Online', color: 'bg-green-500', border: 'border-green-500' },
-                { status: 'Warning', color: 'bg-yellow-500', border: 'border-yellow-500' },
-                { status: 'Critical', color: 'bg-rose-500', border: 'border-rose-500' },
-                { status: 'Offline', color: 'bg-gray-500', border: 'border-gray-500' },
-              ].map((s) => (
-                <div key={s.status} className="flex items-center gap-3">
-                  <div className={`w-3.5 h-3.5 rounded-full border-2 ${s.border}`}>
-                    <div className={`w-full h-full rounded-full ${s.color} opacity-60`} />
+                { status: 'Online', color: 'bg-green-500', border: 'border-green-500', key: 'online' },
+                { status: 'Warning', color: 'bg-yellow-500', border: 'border-yellow-500', key: 'warning' },
+                { status: 'Critical', color: 'bg-rose-500', border: 'border-rose-500', key: 'critical' },
+                { status: 'Offline', color: 'bg-gray-500', border: 'border-gray-500', key: 'offline' },
+              ].map((s) => {
+                const count = gridNodes.filter((n) => n.status === s.key).length;
+                return (
+                  <div key={s.status} className="flex items-center gap-3">
+                    <div className={`w-3.5 h-3.5 rounded-full border-2 ${s.border}`}>
+                      <div className={`w-full h-full rounded-full ${s.color} opacity-60`} />
+                    </div>
+                    <span className="text-sm flex-1">{s.status}</span>
+                    <Badge variant="secondary" className="text-[10px] px-1.5">
+                      {count}
+                    </Badge>
                   </div>
-                  <span className="text-sm">{s.status}</span>
-                </div>
-              ))}
+                );
+              })}
             </CardContent>
           </Card>
         </motion.div>
