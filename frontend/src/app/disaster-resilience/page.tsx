@@ -13,7 +13,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { gridNodes } from '@/lib/mock-data';
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -21,7 +21,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
@@ -172,7 +172,7 @@ export default function DisasterResiliencePage() {
                     </div>
                     <Slider
                       value={intensity}
-                      onValueChange={setIntensity}
+                      onValueChange={(val) => setIntensity(val as number[])}
                       max={10}
                       min={1}
                       step={1}

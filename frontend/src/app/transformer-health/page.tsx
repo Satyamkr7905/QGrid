@@ -15,7 +15,7 @@ const RiskOverview = dynamic(() => import('@/components/transformer/RiskOverview
   loading: () => <div className="h-[250px] flex items-center justify-center text-muted-foreground">Loading chart...</div>
 });
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -23,7 +23,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };

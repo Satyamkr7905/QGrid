@@ -13,7 +13,7 @@ import { gridNodes, gridEdges } from '@/lib/mock-data';
 const GridTopology = dynamic(() => import('@/components/quantum/GridTopology'), { ssr: false });
 const QAOAPanel = dynamic(() => import('@/components/quantum/QAOAPanel'), { ssr: false });
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -21,7 +21,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };

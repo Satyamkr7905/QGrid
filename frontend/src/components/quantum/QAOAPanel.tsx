@@ -78,7 +78,7 @@ export default function QAOAPanel() {
             </div>
             <Slider
               value={layers}
-              onValueChange={setLayers}
+              onValueChange={(val) => setLayers(val as number[])}
               max={10}
               min={1}
               step={1}
@@ -93,7 +93,7 @@ export default function QAOAPanel() {
             </div>
             <Slider
               value={iterations}
-              onValueChange={setIterations}
+              onValueChange={(val) => setIterations(val as number[])}
               max={500}
               min={50}
               step={50}

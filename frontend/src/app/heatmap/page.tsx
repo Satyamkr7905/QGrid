@@ -26,7 +26,7 @@ const SmartCityMap = dynamic(() => import('@/components/heatmap/SmartCityMap'), 
   ),
 });
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -34,7 +34,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
@@ -83,7 +83,7 @@ export default function HeatmapPage() {
           </Badge>
           <div className="flex items-center gap-2">
             <Filter className="w-4 h-4 text-muted-foreground" />
-            <Select value={selectedType} onValueChange={setSelectedType}>
+            <Select value={selectedType} onValueChange={(val) => setSelectedType(val || "")}>
               <SelectTrigger className="w-[160px] h-9">
                 <SelectValue placeholder="Filter by type" />
               </SelectTrigger>
